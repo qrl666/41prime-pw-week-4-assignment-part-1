@@ -14,7 +14,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  name = "Cyril";
+  name = "Booboo";
   return "Hello, " + name + "!";
 }
 // Remember to call the function to test
@@ -41,9 +41,8 @@ console.log(multiplyThree(3, 5, 6));
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
+    return true;
+  } else return false;
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -53,7 +52,18 @@ console.log("isPositive - should say false", isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast(array) {}
+let array = ["dog", "cat", "bird"];
+
+function getLast(array) {
+  if (array.length < 1) {
+    // could not set this as if (array.length=0), showed as 'undefined', but not my return value undefined, it was just undefined
+    return "undefined";
+  } else {
+    return array[array.length - 1];
+  }
+}
+
+console.log(getLast(array));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
