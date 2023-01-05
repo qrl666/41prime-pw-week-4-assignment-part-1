@@ -85,7 +85,7 @@ console.log(find("bird", arr1));
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  for (let element of string){
+  for (let element of string) {
     if (element == letter) {
       return true;
     }
@@ -97,22 +97,34 @@ console.log("isFirstLetter - should say false", isFirstLetter("z", "apple"));
 
 // 9. Function to return the sum of all numbers in an array
 
-let arr2 = [3, 4, 5]
+let arr2 = [-5, 9, -3, 4];
 
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-  for(let i=0; i<array.length; i++) {
-    sum += array[i]
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   }
   return sum;
 }
 
-console.log(sumAll(arr2))
+console.log(sumAll(arr2));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
+function gimmePos(array) {
+  let arr3 = [];
+  for (let element of array) {
+    if (element > 0) {
+      arr3.push(element);
+    } //if statement
+  } // for loop
+  return arr3;
+} // function
+
+console.log(gimmePos(arr2))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
