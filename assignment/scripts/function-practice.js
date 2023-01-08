@@ -124,8 +124,23 @@ function gimmePos(array) {
   return arr3;
 } // function
 
-console.log(gimmePos(arr2))
+console.log(gimmePos(arr2));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+// Challenge was to create a function that counted the number of true values in an array and returned the total value.
+
+let howManyTrue = [true, false, true, true, true, false];
+
+function countTrue(arr) {
+  let noFalse = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === true) {
+      noFalse++;
+    }
+  }
+  return noFalse;
+}
+
+console.log(countTrue(howManyTrue));
