@@ -51,18 +51,31 @@ console.log("isPositive - should say false", isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+
+// could not set this as if (arr1.length=0), showed as 'undefined', but not my return value undefined, it was not working
+
 let arr1 = ["dog", "cat", "bird"];
 
-function getLast(arr1) {
+let arr0 = [];
+
+/*function getLast(arr1) {
   if (arr1.length < 1) {
-    // could not set this as if (arr1.length=0), showed as 'undefined', but not my return value undefined, it was not working
     return "undefined";
   } else {
     return arr1[arr1.length - 1];
   }
+}*/
+
+//I did not understand that `` is different than a string ''. Still not entirely sure what `` denotes though... But this problem is much simpler now. 
+
+function getLast(array) {
+ 
+    return array[array.length - 1];
+  
 }
 
 console.log(getLast(arr1));
+console.log(getLast(arr0));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -135,7 +148,7 @@ let howManyTrue = [true, false, true, true, true, false];
 
 function countTrue(arr) {
   let noFalse = 0;
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] === true) {
       noFalse++;
     }
