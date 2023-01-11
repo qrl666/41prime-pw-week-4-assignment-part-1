@@ -83,7 +83,7 @@ console.log(getLast(arr0));
 
 function find(value, array) {
   for (let element of array) {
-    if (element == value) {
+    if (element === value) {
       return true;
     } //if statement
   } //for of loop
